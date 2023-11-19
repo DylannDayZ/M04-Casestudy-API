@@ -48,7 +48,7 @@ def add+book():
     db.session.commit()
     return {'id': book.id}
 
-@app.route('/drinks/<id>', methods=["Delete"])
+@app.route('/books/<id>', methods=["Delete"])
 def delete_book(id):
     book = Book.query.get(id)
     if book is None:
